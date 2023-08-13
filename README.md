@@ -1,4 +1,4 @@
-> # Empower vote
+> # Civic Feeds
 
 ## **Steps to set up the project in your local system**
  ### clone the project from your forked repo
@@ -7,9 +7,9 @@ git clone <Repo URL>
 ```
 
 ### set up **frontend**
-1) Go to the frontendReactNative folder
+1) Go to the ClientReactNative folder
  ```
-cd frontendReactNative
+cd ClientReactNative
  ```
 2) install all the dependencies
 ```
@@ -22,9 +22,9 @@ npm start
 > You will see a scanner you need to scan it through ExpoGo App(Install from playstore)
 
 ### set up the **backend**
-1) Go to the backendNodejs folder
+1) Go to the ServerNodejs folder
 ```
-cd backendNodejs
+cd ServerNodejs
  ```
 2) install all the dependencies
 ```
