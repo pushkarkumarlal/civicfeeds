@@ -1,0 +1,26 @@
+{
+  "name": "empoweringvotebackend",
+  "version": "1.0.0",
+  "description": "Backend 1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/badreerauniyar/empoweringVoteBackend.git"
+  },
+  "author": "pushakr,Badree",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/badreerauniyar/empoweringVoteBackend/issues"
+  },
+  "homepage": "https://github.com/badreerauniyar/empoweringVoteBackend#readme",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2",
+    "helmet": "^7.0.0",
+    "mongoose": "^7.4.0"
+  }
+}
