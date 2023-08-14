@@ -1,5 +1,4 @@
 
-![civicfeeds](https://github.com/pushkarkumarlal/civicfeeds/assets/72812113/c467f5b9-c478-4caf-a602-2a1eabc456ff)
 ![yellowcivicfeeds](https://github.com/pushkarkumarlal/civicfeeds/assets/72812113/47f8c6e8-a915-4b4a-8016-e59beae178a6)
 
 
