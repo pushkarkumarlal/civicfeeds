@@ -4,7 +4,7 @@ import { StyleSheet } from "react-native";
 const styles=StyleSheet.create({
     container:{
         flex:3,
-        backgroundColor:'#FFFFFF',
+        backgroundColor:'white',
         fontSize:1
     },
     container1:{
@@ -32,6 +32,7 @@ const styles=StyleSheet.create({
         fontSize:20,
         textAlign:'center',
         backgroundColor:'black',
+        color: 'white', 
      
     },
 
@@ -39,6 +40,11 @@ const styles=StyleSheet.create({
       display:'flex',
       alignItems:'center',
       justifyContent:'center'
+    },
+    passwordVisibilityIcon: {
+      position: 'absolute',
+      top: 10,
+      right: 15,
     },
     loginButton:{
     backgroundColor: '#000000',
