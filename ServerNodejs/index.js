@@ -5,6 +5,7 @@ const cors = require('cors');
 const helmet = require('helmet');
 
 const userRoute=require('./routes/user')
+const postRoute=require('./routes/post')
 // Load environment variables from .env file
 dotenv.config();
 const server = express();
@@ -32,3 +33,4 @@ server.listen(process.env.portnum, () => {
 });
 
 server.use('/users', userRoute);
+server.use('/posts', postRoute);
