@@ -3,6 +3,7 @@
 > # Civic Feeds
 
 ## **Steps to set up the project in your local system**
+ ### Fork The Project
  ### clone the project from your forked repo
 ```
 git clone <Repo URL>
