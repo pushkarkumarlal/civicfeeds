@@ -23,6 +23,10 @@ const loginpage = ({ navigation }) => {
     const [password, setPassword] = React.useState('');
     const [showPassword, setShowPassword] = React.useState(false);
 
+    const handleRegister = () => {
+        navigation.navigate('Register');
+      };
+
 
     const handleLogin = async () => {
         
@@ -96,11 +100,10 @@ const loginpage = ({ navigation }) => {
                         </TouchableOpacity>
                     </View>
                     <View style={styles.registerContainer}>
-                        <TouchableOpacity>
+                        <TouchableOpacity onPress={handleRegister}>
                             <Text style={styles.register}>
-                                <Link href="../createaccount/phonenum/phonenum">
+                                
                                     Register
-                                </Link>
                             </Text>
                             <View style={styles.touchRegister}></View>
                         </TouchableOpacity>

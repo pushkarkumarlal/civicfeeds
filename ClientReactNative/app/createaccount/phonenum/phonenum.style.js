@@ -5,7 +5,6 @@ const styles = StyleSheet.create({
     container: {
         flex: 1,
         backgroundColor: '#FFFFFF',
-        marginTop: 41,
     },
 
     container1: {
@@ -24,6 +23,13 @@ const styles = StyleSheet.create({
         flex: 1,
         display: 'flex',
         alignItems: 'center',
+        
+    },
+    submitArrow:{
+        alignItems: 'center',
+        height: 25,
+        width: 50,
+
     },
 
     container1_1: {
@@ -41,7 +47,7 @@ const styles = StyleSheet.create({
         width: 320,
         borderRadius: 25,
         fontSize: 20,
-        alignSelf: 'center',
+        textAlign: 'center',
         borderColor: 'black',
 
         borderTopWidth: 1,

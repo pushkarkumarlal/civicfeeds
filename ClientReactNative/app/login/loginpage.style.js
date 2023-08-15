@@ -47,7 +47,8 @@ const styles = StyleSheet.create({
     loginButton: {
         backgroundColor: '#000000',
         borderRadius: 15,
-        width: 70,
+        width: 100,
+        height:40,
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'center',
@@ -84,7 +85,7 @@ const styles = StyleSheet.create({
     touchForgetPassword: {
         borderRadius: 15,
         height: 10,
-        width: 155,
+        width: 140,
         backgroundColor: '#000000',
     },
 });
