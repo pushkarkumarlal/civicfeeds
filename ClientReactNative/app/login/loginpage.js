@@ -77,7 +77,7 @@ const loginpage = ({ navigation }) => {
                         >
                             <Icon
                                 name={showPassword ? 'eye-slash' : 'eye'}
-                                size={30}
+                                size={20}
                                 color="white"
                             />
                         </TouchableOpacity>

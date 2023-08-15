@@ -41,7 +41,7 @@ const styles = StyleSheet.create({
     },
     passwordVisibilityIcon: {
         position: 'absolute',
-        top: 10,
+        top: 18,
         right: 15,
     },
     loginButton: {
