@@ -9,6 +9,7 @@ const userSchema = new mongoose.Schema({
   },
   phoneNumber: {
     type: String,
+    required: true
   },
   address: String,
   city: String,
@@ -17,6 +18,7 @@ const userSchema = new mongoose.Schema({
   pincode: String,
   password: {
     type: String,
+    required: true
   },
   gender: {
     type: String,

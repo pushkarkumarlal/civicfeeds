@@ -69,17 +69,18 @@ route.post('/register', async (req, res) => {
       const user = await UserModel.findOne({ phoneNumber });
   
       if (!user) {
-        return res.status(401).json({ error: 'Invalid credentials' });
+        return res.status(401).json({ error: 'Invalid credentials username' });
       }
   
       // Compare the provided password with the hashed password in the database
       const passwordMatch = await bcrypt.compare(password, user.password);
   
       if (!passwordMatch) {
-        return res.status(401).json({ error: 'Invalid credentials' });
+        return res.status(401).json({ error: 'Invalid credentials password' });
       }
   
       res.json({ message: 'Login successful', user: user });
+
     } catch (error) {
       console.error('Error during login:', error);
       res.status(500).json({ error: 'Something went wrong' });
