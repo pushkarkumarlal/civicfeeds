@@ -51,6 +51,7 @@
     "metro-resolver": "^0.73.7"
   },
   "private": true,
+  
   "prettier": {
     "trailingComma": "es5",
     "tabWidth": 4,
