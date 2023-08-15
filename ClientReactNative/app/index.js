@@ -1,4 +1,4 @@
-// import React from 'react';
+import React from 'react';
 // import { View, SafereaView, Text, Pressable } from 'react-native';
 // import { Link } from 'expo-router';
 
@@ -15,7 +15,7 @@
 // };
 // export default driver;
 
-import React from 'react';
+//import React from 'react';
 import { createAppContainer } from 'react-navigation';
 import { createStackNavigator } from 'react-navigation-stack';
 import LoginScreen from './login/loginpage';
