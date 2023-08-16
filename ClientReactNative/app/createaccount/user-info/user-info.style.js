@@ -5,12 +5,9 @@ const styles = StyleSheet.create({
     container: {
         flex: 1,
         justifyContent: 'space-evenly',
-        marginTop: 25,
+      
     },
-    container1: {
-        flex: 1,
-        justifyContent: 'center',
-    },
+
     container2: {
         flex: 9,
         justifyContent: 'space-between',
@@ -23,7 +20,8 @@ const styles = StyleSheet.create({
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'center',
-        marginBottom: 5,
+        marginBottom: 100,
+        marginTop:100,
     },
 
     container1_1: {
@@ -34,9 +32,11 @@ const styles = StyleSheet.create({
     leftArrowImage: {
         resizeMode: 'contain',
     },
-    container1_2: {
-        flex: 2,
+    container1: {
+        flex: 1,
         alignItems: 'center',
+        marginTop:25,
+        marginButtom:25,
     },
     input: {
         marginTop: 25,
@@ -45,8 +45,8 @@ const styles = StyleSheet.create({
 
         height: 55,
         width: 320,
-        borderRadius: 0,
         fontSize: 20,
+        textAlign: 'center',
 
         alignSelf: 'center',
         borderColor: 'black',
@@ -55,6 +55,9 @@ const styles = StyleSheet.create({
         borderLeftWidth: 1,
         borderRightWidth: 1,
         borderBottomWidth: 3,
+
+
+        borderRadius:10,
     },
 
     details: {
@@ -82,6 +85,7 @@ const styles = StyleSheet.create({
         backgroundColor: 'lightgray',
         marginTop: 25,
         marginBottom: 25,
+        borderRadius:25,
     },
 });
 export default styles;

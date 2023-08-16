@@ -19,12 +19,19 @@ import React from 'react';
 import { createAppContainer } from 'react-navigation';
 import { createStackNavigator } from 'react-navigation-stack';
 import LoginScreen from './login/loginpage';
-import DashboardScreen from './dashboard/dashboard'; // create this screen too
+import DashboardScreen from './dashboard/dashboard';
+import RegisterScreen from './createaccount/phonenum/phonenum'
+import OtpVerificationScreen from './createaccount/otp-verification-register-page/otp-verification'
+import UserInfoScreen from './createaccount/user-info/user-info';
 
 const AppNavigator = createStackNavigator(
   {
     Login: LoginScreen,
     Dashboard: DashboardScreen,
+    Register:RegisterScreen,
+    OtpVerification:OtpVerificationScreen,
+    UserInfo:UserInfoScreen,
+
   },
   {
     initialRouteName: 'Login',

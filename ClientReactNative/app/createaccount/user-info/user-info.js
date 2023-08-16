@@ -25,40 +25,25 @@ const UserInfo = () => {
     };
 
     return (
-        <View style={{ flex: 1 }}>
+        <SafeAreaView style={{ flex: 1 }}>
             <StatusBar backgroundColor="#f0f0f0" barStyle="dark-content" />
-            <SafeAreaView style={styles.container}>
                 <KeyboardAvoidingView
                     style={styles.container}
-                    behavior={Platform.OS === 'ios' ? 'padding' : null}
-                >
-                    <View style={styles.container1_1}>
-                        <Link
-                            href={
-                                '../otp-verification-register-page/otp-verification'
-                            }
-                        >
-                            .
-                            <Image
-                                style={styles.leftArrowImage}
-                                source={leftArrow}
-                            />
-                        </Link>
-                    </View>
-
-                    <View style={styles.container1_2}>
-                        <Image style={styles.details} source={detailsImage} />
-                    </View>
-                </KeyboardAvoidingView>
-
-                <KeyboardAvoidingView
-                    style={styles.container2}
                     behavior={Platform.OS === 'ios' ? 'padding' : null}
                 >
                     <ScrollView
                         showsVerticalScrollIndicator={false}
                         contentContainerStyle={styles.scrollViewContent}
                     >
+                    
+
+                    <View style={styles.container1}>
+                        <Image style={styles.details} source={detailsImage} />
+                    </View>
+                
+
+                <View>
+                    
                         <TextInput
                             style={styles.input}
                             placeholder="First Name*"
@@ -84,6 +69,7 @@ const UserInfo = () => {
                             onValueChange={(itemValue) =>
                                 handleGenderChange(itemValue)
                             }
+                            
                         >
                             <Picker.Item label="Gender*" value="" />
                             <Picker.Item label="Male" value="male" />
@@ -114,20 +100,22 @@ const UserInfo = () => {
                             placeholderTextColor="black"
                             textAlign="center"
                         />
-                    </ScrollView>
-                </KeyboardAvoidingView>
+                    
+                </View>
 
-                <KeyboardAvoidingView
+                <View
                     style={styles.container3}
-                    behavior={Platform.OS === 'ios' ? 'padding' : null}
+                
                 >
                     <Link href="/otp-verification">
                         {' '}
                         <Image source={rightArrow} />
                     </Link>
+                </View>
+                </ScrollView>
                 </KeyboardAvoidingView>
-            </SafeAreaView>
-        </View>
+            
+        </SafeAreaView>
     );
 };
 
