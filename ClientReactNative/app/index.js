@@ -23,6 +23,10 @@ import DashboardScreen from './dashboard/dashboard';
 import RegisterScreen from './createaccount/phonenum/phonenum'
 import OtpVerificationScreen from './createaccount/otp-verification-register-page/otp-verification'
 import UserInfoScreen from './createaccount/user-info/user-info';
+import checkPhoneNumberRegisteredScreen from './forgetPassword/checkPhoneNumberRegistered';
+import OtpVerificationForgetPasswordScreen from './forgetPassword/otpVerificationForgetPassword';
+import createNewPasswordScreen from './forgetPassword/createNewPassword';
+
 
 const AppNavigator = createStackNavigator(
   {
@@ -31,7 +35,10 @@ const AppNavigator = createStackNavigator(
     Register:RegisterScreen,
     OtpVerification:OtpVerificationScreen,
     UserInfo:UserInfoScreen,
-
+    checkPhoneNumberRegistered:checkPhoneNumberRegisteredScreen,
+    OtpVerificationForgetPassword:OtpVerificationForgetPasswordScreen,
+    createNewPassword:createNewPasswordScreen
+    
   },
   {
     initialRouteName: 'Login',

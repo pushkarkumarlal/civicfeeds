@@ -19,6 +19,7 @@ import styles from './loginpage.style';
 const empowerVoteLogo = require('../../assets/logos/EmpowerVote.png');
 
 const loginpage = ({ navigation }) => {
+    
     const [PhoneNumber, setPhoneNumber] = React.useState('');
     const [password, setPassword] = React.useState('');
     const [showPassword, setShowPassword] = React.useState(false);
@@ -27,13 +28,15 @@ const loginpage = ({ navigation }) => {
         navigation.navigate('Register');
       };
 
+    const handleForgetPassword=()=>{
+        navigation.navigate('checkPhoneNumberRegistered');
+    }
+
 
     const handleLogin = async () => {
-        
-        
         try {
 
-            const response = await axios.post('http://127.0.0.1:8080/users/login', {
+            const response = await axios.post('http://localhost:8080/users/login', {
                 phoneNumber: PhoneNumber,
                 password: password 
             });
@@ -44,8 +47,6 @@ const loginpage = ({ navigation }) => {
             console.log(error);
         }
     };
-    console.log(PhoneNumber)
-    console.log(password)
 
     return (
         <SafeAreaView style={{ flex: 1 }}>
@@ -107,11 +108,12 @@ const loginpage = ({ navigation }) => {
                             </Text>
                             <View style={styles.touchRegister}></View>
                         </TouchableOpacity>
-                        <TouchableOpacity>
+
+                        <TouchableOpacity onPress={handleForgetPassword}>
                             <Text style={styles.forgetPassword}>
-                                <Link href="../forgetPassword/forgetpassword">
+                                
                                     Forget Password?
-                                </Link>
+                                
                                 </Text>
                             <View style={styles.touchForgetPassword}></View>
                         </TouchableOpacity>

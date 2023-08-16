@@ -2,12 +2,12 @@ import React from 'react';
 import { View, SafereaView, Text } from 'react-native';
 import { Stack, useRouter } from 'expo-router';
 
-const ForgetPassword = () => {
+const createNewPassword = () => {
     return (
-        <View>
-            <Text> Forget Password </Text>
+        <View style={{alignContent:'center'}}>
+            <Text> Create New Password </Text>
         </View>
     );
 };
 
-export default ForgetPassword;
+export default createNewPassword;
