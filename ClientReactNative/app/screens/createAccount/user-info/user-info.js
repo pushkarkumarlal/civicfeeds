@@ -12,9 +12,9 @@ import { Link } from 'expo-router';
 import { ScrollView, TextInput } from 'react-native-gesture-handler';
 import { Picker } from '@react-native-picker/picker';
 
-const rightArrow = require('../../../assets/logos/ArrowRightSmall.png');
-const leftArrow = require('../../../assets/logos/ArrowLeftSmall.png');
-const detailsImage = require('../../../assets/logos/Details.png');
+const rightArrow = require('../../../../assets/logos/ArrowRightSmall.png');
+const leftArrow = require('../../../../assets/logos/ArrowLeftSmall.png');
+const detailsImage = require('../../../../assets/logos/Details.png');
 import styles from './user-info.style';
 
 const UserInfo = () => {

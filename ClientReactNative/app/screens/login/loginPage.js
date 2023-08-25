@@ -16,9 +16,9 @@ import { Link } from 'expo-router';
 
 import styles from './loginpage.style';
 
-const empowerVoteLogo = require('../../assets/logos/EmpowerVote.png');
+const empowerVoteLogo = require('../../../assets/logos/EmpowerVote.png');
 
-const loginpage = ({ navigation }) => {
+const loginPage = ({ navigation }) => {
     
     const [PhoneNumber, setPhoneNumber] = React.useState('');
     const [password, setPassword] = React.useState('');
@@ -123,4 +123,4 @@ const loginpage = ({ navigation }) => {
         </SafeAreaView>
     );
 };
-export default loginpage;
+export default loginPage;

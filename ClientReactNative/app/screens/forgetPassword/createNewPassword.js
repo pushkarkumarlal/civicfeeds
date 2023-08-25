@@ -7,26 +7,54 @@ import {
     TouchableOpacity,
     StatusBar,
     KeyboardAvoidingView,
+    Alert
 } from 'react-native';
 import { Link } from 'expo-router';
 import { ScrollView, TextInput } from 'react-native-gesture-handler';
 
 import styles from './checkPhoneNumberRegistered.style';
-const createAccountImage = require('../../assets/logos/CreateAccount.png');
-const rightArrow = require('../../assets/logos/ArrowRightSmall.png');
+
+const rightArrow = require('../../../assets/logos/ArrowRightSmall.png');
 
 
 const checkPhoneNumberRegistered = ({ navigation }) => {
-    const [phoneNumber, setPhoneNumber] = useState('');
-    const [areaCode, setAreaCode] = useState('');
+    
+    const [newPassword, setNewPassword] = useState('');
+    const [confirmPassword, setConfirmPassword] = useState('');
 
 
     const handlesubmitArrow = () => {
 
         try{
-             navigation.navigate('OtpVerificationForgetPassword');
+
+            if(newPassword==confirmPassword){
+                Alert.alert(
+                'New Password Created',
+                'Are you sure you want to delete this item?',
+                [
+                  {
+                    text: 'OK',
+                    onPress: () => navigation.navigate('Login')
+                  },
+                  
+                ]
+              );
+            }
+            else{
+                Alert.alert(
+                    'Password Do Not Match',
+                    'Check Your Password And Try Again',
+                    [{
+                        text:'Retry',
+                    onPress:() =>{setNewPassword(''),setConfirmPassword('')}
+                    
+                    },]
+                );
+
+              }
+
             }catch(error){
-            console.log("Your Number Is Not Registered");
+            console.log(error);
         }
        
       };
@@ -43,31 +71,25 @@ const checkPhoneNumberRegistered = ({ navigation }) => {
     
 
                 <View style={styles.container1}>
-                    {/* <View style={styles.container1_1}>
-                        
-                    </View>
-
-                    <View style={styles.container1_2}>
-                       
-                    </View> */}
+                    {/* inset image */}
                 </View>
 
                 <View style={styles.container2}>
                     <View>
                         <TextInput
                             style={styles.input}
-                            placeholder="Enter Mobile Number"
+                            placeholder="New Password"
                             textAlign="center"
-                            onChangeText={setPhoneNumber}
-                            value={phoneNumber}
+                            onChangeText={setNewPassword}
+                            value={newPassword}
                         ></TextInput>
 
                         <TextInput
                             style={styles.input}
-                            placeholder="Enter Country Code"
+                            placeholder="Confirm Password"
                             textAlign="center"
-                            onChangeText={setAreaCode}
-                            value={areaCode}
+                            onChangeText={setConfirmPassword}
+                            value={confirmPassword}
                         ></TextInput>
                     </View>
                 </View>
@@ -77,7 +99,6 @@ const checkPhoneNumberRegistered = ({ navigation }) => {
                     <Image source={rightArrow} />
                     </TouchableOpacity>
                         
-                    
                 </View>
                 </KeyboardAvoidingView>
         </SafeAreaView>

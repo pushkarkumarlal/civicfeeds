@@ -11,17 +11,17 @@ import {
 import { Link } from 'expo-router';
 import { ScrollView, TextInput } from 'react-native-gesture-handler';
 
-import styles from './otpVerificationForgetPassword.style';
+import styles from './otp-verification.style';
 
-const rightArrow = require('../../assets/logos/ArrowRightSmall.png');
-const otpVerificationImage = require('../../assets/logos/OtpVerification.png');
+const rightArrow = require('../../../../assets/logos/ArrowRightSmall.png');
+const otpVerificationImage = require('../../../../assets/logos/OtpVerification.png');
 
-const OtpVerificationForgetPassword = ({navigation}) => {
+const OtpVerification = ({navigation}) => {
 
     const handlesubmitArrow = () => {
 
         try{
-             navigation.navigate('createNewPassword');
+             navigation.navigate('UserInfo');
             }catch(error){
             console.log(" Opt Verfication Failed");
         }
@@ -64,4 +64,4 @@ const OtpVerificationForgetPassword = ({navigation}) => {
     );
 };
 
-export default OtpVerificationForgetPassword;
+export default OtpVerification;

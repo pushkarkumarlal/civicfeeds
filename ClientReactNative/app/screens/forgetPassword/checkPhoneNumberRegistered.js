@@ -11,12 +11,12 @@ import {
 import { Link } from 'expo-router';
 import { ScrollView, TextInput } from 'react-native-gesture-handler';
 
-import styles from './phonenum.style';
+import styles from './checkPhoneNumberRegistered.style';
 const createAccountImage = require('../../../assets/logos/CreateAccount.png');
 const rightArrow = require('../../../assets/logos/ArrowRightSmall.png');
 
 
-const PhoneNumber = ({ navigation }) => {
+const checkPhoneNumberRegistered = ({ navigation }) => {
     const [phoneNumber, setPhoneNumber] = useState('');
     const [areaCode, setAreaCode] = useState('');
 
@@ -24,9 +24,9 @@ const PhoneNumber = ({ navigation }) => {
     const handlesubmitArrow = () => {
 
         try{
-             navigation.navigate('OtpVerification');
+             navigation.navigate('OtpVerificationForgetPassword');
             }catch(error){
-            console.log(" Number Registration failed ");
+            console.log("Your Number Is Not Registered");
         }
        
       };
@@ -43,16 +43,7 @@ const PhoneNumber = ({ navigation }) => {
     
 
                 <View style={styles.container1}>
-                    <View style={styles.container1_1}>
-                        
-                    </View>
-
-                    <View style={styles.container1_2}>
-                        <Image
-                            style={styles.createAccountImage}
-                            source={createAccountImage}
-                        />
-                    </View>
+                    {/* inset image */}
                 </View>
 
                 <View style={styles.container2}>
@@ -87,4 +78,4 @@ const PhoneNumber = ({ navigation }) => {
     );
 };
 
-export default PhoneNumber;
+export default checkPhoneNumberRegistered;
